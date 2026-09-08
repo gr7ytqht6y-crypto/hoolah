@@ -1,0 +1,61 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  body {
+    @apply font-sans text-neutral-900 bg-neutral-0;
+  }
+
+  h1 {
+    @apply text-4xl font-bold text-neutral-900 mb-md;
+  }
+
+  h2 {
+    @apply text-3xl font-bold text-neutral-900 mb-lg;
+  }
+
+  h3 {
+    @apply text-2xl font-bold text-neutral-800 mb-md;
+  }
+
+  p {
+    @apply text-base text-neutral-700 leading-relaxed;
+  }
+}
+
+@layer components {
+  .container-app {
+    @apply max-w-7xl mx-auto px-md py-lg;
+  }
+
+  .gradient-hoolah {
+    background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+  }
+
+  .transition-fast {
+    @apply transition-all duration-fast;
+  }
+
+  .transition-base {
+    @apply transition-all duration-base;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  @apply bg-primary-200 text-primary-900;
+}
+
+::-moz-selection {
+  @apply bg-primary-200 text-primary-900;
+}
